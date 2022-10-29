@@ -1,43 +1,55 @@
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
-import TheWelcome from "./components/TheWelcome.vue";
+import WelcomeBox from "./components/WelcomeBox.vue";
 </script>
 
 <template>
   <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="./assets/logo.svg"
-      width="125"
-      height="125"
-    />
-
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <h1>¡Pongámonos a</h1>
+      <WelcomeBox msg=" Cocinar!" />
+      <button id="ingSearchB" type="button" v-on:click="">Hago clic</button>
     </div>
   </header>
 
-  <main>
-    <TheWelcome />
-  </main>
 </template>
 
 <style scoped>
 header {
   line-height: 1.5;
 }
+header .wrapper {
+  display: flex;
+  place-items: flex-start;
+  white-space: pre-wrap;
+  background-color: #FFFFFF15;
+  padding: 11px;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
+button{
+  border-radius: .4rem;
+  margin: 1rem;
+  background: #FFFFFF15;
+  color: currentcolor;
+  padding: inherit;
+}
+
+button:hover{
+  background: #856c6c15;
+}
 .logo {
   display: block;
   margin: 0 auto 2rem;
 }
 
 @media (min-width: 1024px) {
-  header {
+  header{
     display: flex;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
+    white-space: pre-wrap;
   }
 
   .logo {
@@ -48,6 +60,8 @@ header {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
+    align-items: center;
   }
 }
 </style>
+>
