@@ -2,8 +2,9 @@ import React from 'react';
 import { Card, CardHeader, CardMedia, CardContent, CardActions, Typography } from '@mui/material';
 import { Button, IconButton, Avatar, Grid } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import { Recipes } from '../../../testing/data/Recipes';
-import '../CSS/RecipeCard.css';
+//cambiar el test
+import { Recipes } from '../../../../testing/data/Recipes';
+import '../../CSS/RecipeCard.css';
 
 
 export default function RecipeReviewCard() {

@@ -1,0 +1,68 @@
+.popup-content {
+  position: relative;
+  width: 35vw;
+  height: auto;
+  margin: auto;
+  pointer-events: auto;
+  background-color: #dce3eb;
+  border-radius: 15px;
+}
+
+.modal {
+  font-size: .5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  padding: 15px;
+}
+
+.modal>.header {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 10px 0 5px 1px;
+}
+
+.modal>.content {
+  width: 100%;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal>.actions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+}
+
+.modal>.close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: 5px;
+  top: 4px;
+  font-size: 1.2rem;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+}
+
+.css-19285mc-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: #272727 !important;
+}
+
+.css-hjtp1-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #272727a9 !important;
+  border-width: 2px;
+}
+
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+  color: rgb(224, 218, 161) !important;
+}

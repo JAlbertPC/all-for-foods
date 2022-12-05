@@ -1,7 +1,7 @@
 import React from 'react';
-import { Container, Box, Button, Typography, TextField, Link } from '@mui/material';
+import { Container, Box, Button, Typography, TextField } from '@mui/material';
 import Popup from 'reactjs-popup';
-import '../../CSS/SigninPopup.css';
+import '../../CSS/Popup.css';
 
 function Sharebanner() {
     return (
@@ -29,21 +29,62 @@ function Sharebanner() {
                 }}>
                     Recipies!
                 </Typography>
-                <Typography sx={{ lineHeight: 3 ,color: '#FFFFFF',}}>
+                <Typography sx={{ lineHeight: 3, color: '#FFFFFF', }}>
                     Log in to share your flavour with the community!
                 </Typography>
-                <Button variant="outlined" sx={{
-                    borderColor: '#CCE7CD45',
-                    bgcolor: '#261D1DBF',
-                    color: '#FFFFFF',
-                }}>Login</Button>
-                <Typography sx={{ lineHeight: 3, color: '#FFFFFF', }}>
-                    or if you don&apos;t have an account
-                </Typography>
-
+                <Popup
+                    trigger={<Button variant="outlined" sx={{
+                        borderColor: '#CCE7CD45',
+                        bgcolor: '#261D1DBF',
+                        color: '#FFFFFF',
+                    }}>Login</Button>}
+                    modal
+                    nested
+                >
+                    {close => (
+                        <div className="modal">
+                            <button className="close" onClick={close}>
+                                &times;
+                            </button>
+                            <div className="header"> Login </div>
+                            <div className="content">
+                                {' '}
+                                <Box component="form"
+                                    sx={{
+                                        '& > :not(style)': { m: 1, }
+                                    }}
+                                    noValidate
+                                    autoComplete="off"
+                                >
+                                    <TextField label="email" type="email" color="secondary" focused />
+                                </Box>
+                                <Box component="form"
+                                    sx={{
+                                        '& > :not(style)': { m: 1, },
+                                    }}
+                                    noValidate
+                                    autoComplete="off"
+                                >
+                                    <TextField label="Password" autocomplete="off" type="password" color="secondary" focused />
+                                </Box>
+                            </div>
+                            <div className="actions">
+                                <Popup
+                                    trigger={<button type="submit" className="button"> Login </button>}
+                                    position="top center"
+                                    nested
+                                >
+                                    <span>
+                                        This should redirect to a loged in landing page
+                                    </span>
+                                </Popup>
+                            </div>
+                        </div>
+                    )}
+                </Popup>
                 {/* Sign in popup */}
                 <Popup
-                    trigger={<Link>¿No tienes cuenta? Regístrate</Link>}
+                    trigger={<Button>¿No tienes cuenta? Regístrate</Button>}
                     modal
                     nested
                 >
@@ -71,7 +112,7 @@ function Sharebanner() {
                                     noValidate
                                     autoComplete="off"
                                 >
-                                    <TextField label="email" color="secondary" focused />
+                                    <TextField label="email" type="email" color="secondary" focused />
                                 </Box>
                                 <Box component="form"
                                     sx={{
@@ -80,20 +121,17 @@ function Sharebanner() {
                                     noValidate
                                     autoComplete="off"
                                 >
-                                    <TextField label="Password" autocomplete="off" color="secondary" focused />
+                                    <TextField label="Password" autocomplete="off" type="password" color="secondary" focused />
                                 </Box>
                             </div>
                             <div className="actions">
                                 <Popup
-                                    trigger={<button className="button"> Sign in </button>}
+                                    trigger={<button type="submit" className="button"> Sign in </button>}
                                     position="top center"
                                     nested
                                 >
                                     <span>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
-                                        magni omnis delectus nemo, maxime molestiae dolorem numquam
-                                        mollitia, voluptate ea, accusamus excepturi deleniti ratione
-                                        sapiente! Laudantium, aperiam doloribus. Odit, aut.
+                                        This should redirect to a loged in landing page
                                     </span>
                                 </Popup>
                             </div>

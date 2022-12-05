@@ -1,11 +1,13 @@
 import React from "react";
-import RecipeReviewCard from "../globalComponents/RecipeCardsList";
+import RecipeReviewCard from "./component/RecipeCardsList.search";
+import Searchbar from "./component/Searchbar";
+import '../CSS/Search.style.css';
 
-function Search() {
+export default function Search() {
     return (
-        <div>
+        <div className="Search">
+            <Searchbar />
             <RecipeReviewCard />
         </div>
     )
 }
-export default Search;
