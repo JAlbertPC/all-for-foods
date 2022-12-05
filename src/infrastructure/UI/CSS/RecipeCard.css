@@ -11,3 +11,15 @@
 .css-11b3ww9-MuiPaper-root-MuiAppBar-root{
     background-color: #0000007a!important;
 }
+
+.top-spacing-section{
+    margin-top: 10vh;
+}
+
+.botton-spacing-section{
+    margin-bottom: 10vh;
+}
+
+.small-top-spacing{
+    margin-top: 5vh;
+}

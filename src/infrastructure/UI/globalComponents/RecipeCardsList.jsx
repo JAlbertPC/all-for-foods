@@ -8,18 +8,9 @@ import '../CSS/RecipeCard.css';
 
 export default function RecipeReviewCard() {
     return (
-        <div>
-            <div className='div-banner'>
-            <Typography variant='h4' >
-                Don&apos;t know what to cook?
-            </Typography>
-            <Typography variant='h6'>
-                Don&apos;t worry, leave it to us!
-            </Typography>
-            </div>
-            <Button  sx={{ bgcolor: '#efd6a7'}} variant="contained">Show me a random recipe</Button>
+        <div className="top-spacing-section" >
 
-            <Grid sx={{ justifyContent: 'space-around'}} container>
+            <Grid sx={{ justifyContent: 'space-around'}} container className="top-spacing-section botton-spacing-section">
                 {Recipes.map(recipeInfo => {
                     return <>
                         <Card sx={{ maxWidth: 345 }}>

@@ -17,13 +17,17 @@ function Welcomebanner() {
                 height: 400,
                 bgcolor: '#00000059'
             }}>
-                <Typography variant="h6">
+                <Typography variant="h6" sx={{
+                    color: '#FFFFFF',
+                }}>
                     Let&apos;s get
                 </Typography>
-                <Typography variant="h4">
+                <Typography variant="h4" sx={{
+                    color: '#FFFFFF',
+                }}>
                     Cooking!
                 </Typography>
-                <Typography sx={{ lineHeight: 3 }}>
+                <Typography sx={{ lineHeight: 3 ,color: '#FFFFFF'}}>
                     Find recipies without worrying about the ingredients you&apos;re missing!
                 </Typography>
                 <Button variant="outlined" sx={{

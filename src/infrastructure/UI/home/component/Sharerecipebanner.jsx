@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Box, Button, Typography, TextField } from '@mui/material';
+import { Container, Box, Button, Typography, TextField, Link } from '@mui/material';
 import Popup from 'reactjs-popup';
 import '../../CSS/SigninPopup.css';
 
@@ -19,13 +19,17 @@ function Sharebanner() {
                 height: 400,
                 bgcolor: '#00000059'
             }}>
-                <Typography variant="h6">
+                <Typography variant="h6" sx={{
+                    color: '#FFFFFF',
+                }}>
                     Share your
                 </Typography>
-                <Typography variant="h4">
+                <Typography variant="h4" sx={{
+                    color: '#FFFFFF',
+                }}>
                     Recipies!
                 </Typography>
-                <Typography sx={{ lineHeight: 3 }}>
+                <Typography sx={{ lineHeight: 3 ,color: '#FFFFFF',}}>
                     Log in to share your flavour with the community!
                 </Typography>
                 <Button variant="outlined" sx={{
@@ -33,13 +37,13 @@ function Sharebanner() {
                     bgcolor: '#261D1DBF',
                     color: '#FFFFFF',
                 }}>Login</Button>
-                <Typography sx={{ lineHeight: 3 }}>
+                <Typography sx={{ lineHeight: 3, color: '#FFFFFF', }}>
                     or if you don&apos;t have an account
                 </Typography>
 
                 {/* Sign in popup */}
                 <Popup
-                    trigger={<button className="button"> Open Modal </button>}
+                    trigger={<Link>¿No tienes cuenta? Regístrate</Link>}
                     modal
                     nested
                 >

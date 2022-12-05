@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { AppBar, Container, Toolbar, Typography, Box, IconButton, Menu, MenuItem, Tooltip, Avatar, Button } from '@mui/material';
 import '../CSS/RecipeCard.css';
 
@@ -7,8 +7,8 @@ const pages = ['Home', 'Search', 'Ingredients'];
 const settings = ['Profile', 'Account', 'Favorites', 'Logout'];
 
 function Navbar() {
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
+    const [anchorElNav, setAnchorElNav] = useState(null);
+    const [anchorElUser, setAnchorElUser] = useState(null);
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
