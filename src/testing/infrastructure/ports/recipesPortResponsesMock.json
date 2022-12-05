@@ -1,0 +1,33 @@
+{
+  "recipeGetByIdMock": {
+    "RecipeId": 1,
+    "Title": "Prueba 0",
+    "Description": "Prueba de nuevo 0",
+    "ImageUrl": "https://cdn-icons-png.flaticon.com/512/1436/1436722.png",
+    "Ingredients": [
+      {
+        "IngredientIdId": 2,
+        "Name": "Cebolla",
+        "Amount": 2
+      },
+      {
+        "IngredientIdId": 3,
+        "Name": "Ajo",
+        "Amount": 2
+      }
+    ],
+    "Portions": 1,
+    "Steps": "Prueba 0",
+    "Score": 4.0,
+    "Author": "PastitoMojado"
+  },
+  "recipeGetAllMock": [
+    {
+      "RecipeId": 1,
+      "Title": "Prueba",
+      "Description": "Prueba de nuevo",
+      "ImageUrl": "https://cdn-icons-png.flaticon.com/512/1436/1436722.png",
+      "Score": 0.0
+    }
+  ]
+}
