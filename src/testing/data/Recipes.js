@@ -28,7 +28,7 @@ export const Recipes = [{
     "Ingredients": [
         {
             "IngredientIdId": 1,
-            "Name": "Tomate",
+            "Name": "Ajo",
             "Amount": 2
         },
         {
