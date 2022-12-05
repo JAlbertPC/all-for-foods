@@ -1,0 +1,19 @@
+{
+  "userPortRegisterUserMock": {
+    "id": 1,
+    "username": "patojuarez",
+    "statusCode": 201
+  },
+  "userAddWatchLaterMock": {
+    "statusCode": 201
+  },
+  "userGetUserMock": {
+    "UserId": 1,
+    "Username": "Patojuarez",
+    "Email": "Patojuarez@gmail.com",
+    "statusCode": 200
+  },
+  "userEditUserMock": {
+    "statusCode": 200
+  }
+}
