@@ -1,0 +1,7 @@
+.banners{
+    display: flex;
+    height: 75vh;
+    background-image: url(https://cdn.pixabay.com/photo/2017/06/29/20/09/mexican-2456038_960_720.jpg);
+    background-size: cover;
+    background-position-y: -17vh;
+}

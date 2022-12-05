@@ -1,0 +1,13 @@
+.div-banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button-show-me{
+    background-color: #efd6a7;
+}
+
+.css-11b3ww9-MuiPaper-root-MuiAppBar-root{
+    background-color: #0000007a!important;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Box, Button, Typography } from '@mui/material';
 
-function Banner() {
+function Welcomebanner() {
     return (
         <Container maxWidth="xl" >
             <Box sx={{
@@ -13,26 +13,26 @@ function Banner() {
                 mt: '15vh',
                 mx: 'auto',
                 typography: 'body1',
-                width: '50vw',
+                width: '45vw',
                 height: 400,
                 bgcolor: '#00000059'
             }}>
                 <Typography variant="h6">
-                    ¡Pongamonos a
+                    Let&apos;s get
                 </Typography>
                 <Typography variant="h4">
-                    Cocinar!
+                    Cooking!
                 </Typography>
                 <Typography sx={{ lineHeight: 3 }}>
-                    Consigue recetas sin preocuparte por los ingredientes que te falten
+                    Find recipies without worrying about the ingredients you&apos;re missing!
                 </Typography>
                 <Button variant="outlined" sx={{
                     borderColor: '#CCE7CD45',
                     bgcolor: '#261D1DBF',
                     color: '#FFFFFF',
-                }}>Lista tus ingredientes</Button>
+                }}>List out your ingredients</Button>
             </Box>
         </Container >
     )
 }
-export default Banner;
+export default Welcomebanner;

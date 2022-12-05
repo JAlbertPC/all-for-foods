@@ -1,8 +1,7 @@
 import React from "react";
 
 function Search() {
-    return (
-        <p><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />Search</p>
+    return (<></>
     )
 }
 export default Search;

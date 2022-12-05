@@ -1,5 +1,7 @@
 import React from "react";
 import { AppBar, Container, Toolbar, Typography, Box, IconButton, Menu, MenuItem, Tooltip, Avatar, Button } from '@mui/material';
+import '../CSS/RecipeCard.css';
+
 
 const pages = ['Home', 'Search', 'Ingredients'];
 const settings = ['Profile', 'Account', 'Favorites', 'Logout'];
@@ -23,7 +25,7 @@ function Navbar() {
         setAnchorElUser(null);
     };
     return (
-        <AppBar position="fixed">
+        <AppBar position="fixed" >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Typography
