@@ -1,5 +1,5 @@
 import React from "react";
-import RecipeReviewCard from "../globalComponents/RecipeCardsList";
+import RecipeReviewCard from "./component/RecipeCardsList.home";
 import Welcomebanner from "./component/Welcomebanner";
 import Sharebanner from "./component/Sharerecipebanner";
 import '../CSS/Home.style.css';
