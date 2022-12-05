@@ -1,5 +1,5 @@
 const baseAPI = "http://localhost:1234"
-import loginPortMock from "../../testing/infrastructure/ports/loginPortMock.json"
+import loginPortMock from "../../testing/infrastructure/ports/loginPortResponseMock.json"
 export const login = (email, password) => {
      return loginPortMock
     /*return fetch(`${baseAPI}/login`, {
