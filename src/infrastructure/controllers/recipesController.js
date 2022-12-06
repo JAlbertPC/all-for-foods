@@ -1,4 +1,4 @@
-import {getAllRecipesPort} from "../ports/recipesPort"
+import {getAllRecipesPort, getRecipeByIdPort} from "../ports/recipesPort"
 
 export const getAllRecipesController = () => {
     return getAllRecipesPort().then(response => {
@@ -7,8 +7,8 @@ export const getAllRecipesController = () => {
     })
 }
 
-export const getRecipeByIdController = () => {
-    getAllRecipesPort().then(recipes => {
+export const getRecipeByIdController = (recipeId) => {
+    return getRecipeByIdPort(recipeId).then(recipes => {
         console.log(recipes)
     })
 }

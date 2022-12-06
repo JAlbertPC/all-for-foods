@@ -3,7 +3,7 @@ import {Card, CardHeader, CardMedia, CardContent, CardActions, Typography} from 
 import {Button, IconButton, Avatar} from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import '../../CSS/RecipeCard.css';
-import { PropTypes } from "prop-types";
+import PropTypes from 'prop-types';
 
 import {getAllRecipesController} from "../../../controllers/recipesController";
 

@@ -1,14 +1,17 @@
-const baseAPI = "http://localhost:1234"
+const baseAPI = "http://localhost:8050/api"
 import loginPortMock from "../../testing/infrastructure/ports/loginPortResponseMock.json"
 
 export const loginUserPort = (email, password) => {
     // return loginPortMock
-    return fetch(`${baseAPI}/login`, {
+    return fetch(`${baseAPI}/Login`, {
         method: "POST",
         body: JSON.stringify({
-                "email": email,
-                "password": password
-            })
+            "email": email,
+            "password": password
+        }),
+        headers: {
+            'Content-Type': 'application/json'
+        }
     })
 }
 /*

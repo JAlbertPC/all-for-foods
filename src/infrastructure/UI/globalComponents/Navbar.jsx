@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import { AppBar, Container, Toolbar, Typography, Box, IconButton, Menu, MenuItem, Tooltip, Avatar, Button } from '@mui/material';
 import '../CSS/Navbar.css';
 
-
 const pages = ['Home', 'Search'];
 const settings = ['Account', 'Favorites', 'Logout'];
 
@@ -93,14 +92,15 @@ function Navbar() {
                           </Button>
                         ))}
                     </Box>
-                    <Box sx={{ flexGrow: 0 }}>
+
+                    {/*<Box sx={{flexGrow: 0}}>
                         <Tooltip title="Open settings">
-                            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                <Avatar alt="Bobby Sharp" src="/static/images/avatar/2.jpg" />
+                            <IconButton onClick={handleOpenUserMenu} sx={{p: 0}}>
+                                <Avatar alt="Bobby Sharp" src="/static/images/avatar/2.jpg"/>
                             </IconButton>
                         </Tooltip>
                         <Menu
-                            sx={{ mt: '45px' }}
+                            sx={{mt: '45px'}}
                             id="menu-appbar"
                             anchorEl={anchorElUser}
                             anchorOrigin={{
@@ -121,7 +121,7 @@ function Navbar() {
                                 </MenuItem>
                             ))}
                         </Menu>
-                    </Box>
+                    </Box>*/}
                 </Toolbar>
             </Container>
         </AppBar>

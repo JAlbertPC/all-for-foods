@@ -17,10 +17,9 @@ function Sharebanner() {
     }
 
     const login = () => {
-        console.log(email + " " + password)
         loginUserController(email, password).then(response => {
-            localStorage.setItem("id", response.id)
-            localStorage.setItem("username", response.username)
+            sessionStorage.setItem("id", response.id)
+            sessionStorage.setItem("username", response.username)
         })
     }
 
@@ -89,15 +88,16 @@ function Sharebanner() {
                                 </Box>
                             </div>
                             <div className="actions">
-                                <Popup
-                                    trigger={<Button type="submit" className="button login-button" onClick={login}> Login </Button>}
+                                <Button type="submit" className="button login-button" onClick={login}> Login </Button>
+                                {/*<Popup
+                                    trigger={}
                                     position="top center"
                                     nested
                                 >
                                     <span>
                                         This should redirect to a loged in landing page
                                     </span>
-                                </Popup>
+                                </Popup>*/}
                             </div>
                         </div>
                     )}
