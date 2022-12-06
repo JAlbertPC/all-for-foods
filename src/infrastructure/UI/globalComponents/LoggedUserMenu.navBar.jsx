@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Avatar, Box, IconButton, Menu, MenuItem, Tooltip, Typography} from "@mui/material";
 
-const settings = ['Account', 'Favorites', 'Logout', 'Write a Recipe'];
+const settings = ['Account', 'Favorites', 'Logout', 'Write'];
 
 export default function LoggedUserMenu() {
     const [anchorElUser, setAnchorElUser] = useState(null);
@@ -38,7 +38,7 @@ export default function LoggedUserMenu() {
                 onClose={handleCloseUserMenu}
             >
                 {settings.map((setting) => (
-                    <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                    <MenuItem key={setting} onClick={() => {MenuClick(setting)}}>
                         <Typography textAlign="center">{setting}</Typography>
                     </MenuItem>
                 ))}

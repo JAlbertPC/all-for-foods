@@ -4,7 +4,7 @@ import Home from './infrastructure/UI/home/Home';
 import Search from "./infrastructure/UI/search/Search";
 import Recipe from './infrastructure/UI/recipe/Recipe';
 import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
-import TextEditor from "./infrastructure/UI/recipe/RecipeWriting";
+import TextEditor from "./infrastructure/UI/recipe/Write";
 import Account from "./infrastructure/UI/account/Account";
 import Favorites from "./infrastructure/UI/account/Favorites";
 

@@ -5,7 +5,6 @@ import Sharebanner from "./component/Sharerecipebanner";
 import '../CSS/Home.style.css';
 import {Button, Typography} from "@mui/material";
 import {getAllRecipesController} from "../../controllers/RecipesController";
-import {loginUserController} from "../../controllers/LoginController";
 import {recetaRandom} from "../../controllers/RecipesController";
 
 function Home() {
