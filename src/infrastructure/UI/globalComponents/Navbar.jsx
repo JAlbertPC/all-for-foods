@@ -1,67 +1,22 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import { AppBar, Container, Toolbar, Typography, Box, IconButton, Menu, MenuItem, Tooltip, Avatar, Button } from '@mui/material';
 import LoggedUserMenu from "./LoggedUserMenu.navBar";
 import {isLogged} from "../../controllers/LoginController";
 import '../CSS/Navbar.css';
 
 const pages = ['Home', 'Search'];
-const settings = ['Account', 'Favorites', 'Logout'];
 
 function Navbar() {
     const [anchorElNav, setAnchorElNav] = useState(null);
-    const [anchorElUser, setAnchorElUser] = useState(null);
-    const [userLogged, setUserLogged] = useState(false);
 
-    useEffect(() =>{
-        isLogged()
-        if(userLogged){
-            return (
-                <Box sx={{flexGrow: 0}}>
-                    <Tooltip title="Open settings">
-                        <IconButton onClick={handleOpenUserMenu} sx={{p: 0}}>
-                            <Avatar alt="Bobby Sharp" src="#"/>
-                        </IconButton>
-                    </Tooltip>
-                    <Menu
-                        sx={{mt: '45px'}}
-                        id="menu-appbar"
-                        anchorEl={anchorElUser}
-                        anchorOrigin={{
-                            vertical: 'top',
-                            horizontal: 'right',
-                        }}
-                        keepMounted
-                        transformOrigin={{
-                            vertical: 'top',
-                            horizontal: 'right',
-                        }}
-                        open={Boolean(anchorElUser)}
-                        onClose={handleCloseUserMenu}
-                    >
-                        {settings.map((setting) => (
-                            <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                <Typography textAlign="center">{setting}</Typography>
-                            </MenuItem>
-                        ))}
-                    </Menu>
-                </Box>
-            )
-        }
-    }, [userLogged])
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
     };
-    const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
-    };
-
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
     };
+    console.log(isLogged())
 
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-    };
     return (
         <AppBar position="fixed" >
             <Container maxWidth="xl">
@@ -131,35 +86,7 @@ function Navbar() {
                           </Button>
                         ))}
                     </Box>
-                    {/*<Box sx={{flexGrow: 0}}>
-                        <Tooltip title="Open settings">
-                            <IconButton onClick={handleOpenUserMenu} sx={{p: 0}}>
-                                <Avatar alt="Bobby Sharp" src="#"/>
-                            </IconButton>
-                        </Tooltip>
-                        <Menu
-                            sx={{mt: '45px'}}
-                            id="menu-appbar"
-                            anchorEl={anchorElUser}
-                            anchorOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            open={Boolean(anchorElUser)}
-                            onClose={handleCloseUserMenu}
-                        >
-                            {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center">{setting}</Typography>
-                                </MenuItem>
-                            ))}
-                        </Menu>
-                    </Box>*/}
+                    {isLogged() ? <LoggedUserMenu />: ""}
                 </Toolbar>
             </Container>
         </AppBar>

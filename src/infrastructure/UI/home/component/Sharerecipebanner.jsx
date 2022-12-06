@@ -4,25 +4,6 @@ import Login from "../../globalComponents/Loggin";
 import SigninPopUp from "../component/SigninPopUp";
 
 function Sharebanner() {
-    const [email, setEmail] = useState(null)
-    const [password, setPassword] = useState(null)
-
-    const handleEmailTextField = (event) => {
-        setEmail(event.target.value)
-    }
-
-    const handlePasswordTextField = (event) => {
-        setPassword(event.target.value)
-    }
-
-    const login = () => {
-        loginUserController(email, password).then(response => {
-            sessionStorage.setItem("id", response.id)
-            sessionStorage.setItem("username", response.username)
-        })
-
-    }
-
     return (
         <Container maxWidth="xl" >
             <Box sx={{
@@ -51,113 +32,8 @@ function Sharebanner() {
                 <Typography sx={{ lineHeight: 3, color: '#FFFFFF', }}>
                     Log in to share your flavour with the community!
                 </Typography>
-                <Popup
-                    trigger={<Button variant="outlined" sx={{
-                        borderColor: '#CCE7CD45',
-                        bgcolor: '#261D1DBF',
-                        color: '#FFFFFF',
-                    }}>Login</Button>}
-                    modal
-                    nested
-                >
-                    {close => (
-                        <div className="modal">
-                            <button className="close" onClick={close}>
-                                &times;
-                            </button>
-                            <div className="header"> Log in </div>
-                            <div className="content">
-                                {' '}
-                                <Box component="form"
-                                    sx={{
-                                        '& > :not(style)': { m: 1, }
-                                    }}
-                                    noValidate
-                                    autoComplete="off"
-                                >
-                                    <TextField label="email" type="email" color="secondary" focused  onChange={handleEmailTextField}/>
-                                </Box>
-                                <Box component="form"
-                                    sx={{
-                                        '& > :not(style)': { m: 1, },
-                                    }}
-                                    noValidate
-                                    autoComplete="off"
-                                >
-                                    <TextField label="Password" autoComplete="off" type="password" color="secondary" focused onChange={handlePasswordTextField}/>
-                                </Box>
-                            </div>
-                            <div className="actions">
-                                <Button type="submit" className="button login-button" onClick={login}> Login </Button>
-                                {/*<Popup
-                                    trigger={}
-                                    position="top center"
-                                    nested
-                                >
-                                    <span>
-                                        This should redirect to a loged in landing page
-                                    </span>
-                                </Popup>*/}
-                            </div>
-                        </div>
-                    )}
-                </Popup>
-                {/* Sign in popup */}
-                <Popup
-                    trigger={<Button>Do not have an account? sign in</Button>}
-                    modal
-                    nested
-                >
-                    {close => (
-                        <div className="modal">
-                            <button className="close" onClick={close}>
-                                &times;
-                            </button>
-                            <div className="header"> Sign in </div>
-                            <div className="content">
-                                {' '}
-                                <Box component="form"
-                                    sx={{
-                                        '& > :not(style)': { m: 1, },
-                                    }}
-                                    noValidate
-                                    autoComplete="off"
-                                >
-                                    <TextField label="Name" color="secondary" focused />
-                                </Box>
-                                <Box component="form"
-                                    sx={{
-                                        '& > :not(style)': { m: 1, },
-                                    }}
-                                    noValidate
-                                    autoComplete="off"
-                                >
-                                    <TextField label="email" type="email" color="secondary" focused />
-                                </Box>
-                                <Box component="form"
-                                    sx={{
-                                        '& > :not(style)': { m: 1, },
-                                    }}
-                                    noValidate
-                                    autoComplete="off"
-                                >
-                                    <TextField label="Password" autoComplete="off" type="password" color="secondary" focused />
-                                </Box>
-                            </div>
-                            <div className="actions">
-                                <Popup
-                                    trigger={<Button type="submit" className="button login-button"> Sign in </Button>}
-                                    position="top center"
-                                    nested
-                                >
-                                    <span>
-                                        This should redirect to a loged in landing page
-                                    </span>
-                                </Popup>
-                            </div>
-                        </div>
-                    )}
-                </Popup>
+                <Login />
+                <SigninPopUp />
             </Box>
         </Container >
     )

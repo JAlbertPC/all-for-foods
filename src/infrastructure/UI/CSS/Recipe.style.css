@@ -19,19 +19,15 @@
     background-image: url("https://img.freepik.com/free-photo/ingredients-making-guakamole_1220-7095.jpg?w=1380&t=st=1670340560~exp=1670341160~hmac=bcaaafad5021056b734c8c744fe281a23ae5e4f78528e228212285e41061f8de");
     background-position-y: center;
     border-radius: 0px 0px 25px 25px;
+
+    color: white;
 }
 
 .dish-img > .css-1rcma2b{
     background-color: transparent!important;
-}
-
-.dish-img {
-    display: flex;
-    color: white;
-}
-
-.dish-img .css-1rcma2b{
     align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
 }
 
 .left{

@@ -14,7 +14,14 @@ export const UserAddWatchLater = (userId, recipeId) => {
 
 export const UserGetUserController = (user) => {
     return userGetUser(user).then(response => {
-        if (response.status !== 200) return {error: "Algo salio mal"}
+        if (response.status !== 200) return {error: "Something went wrong while getting user info"}
+        return response.json()
+    })
+}
+
+export const UserEditUserController = (userId, userNewEmail, userNewPassword, userPassword) => {
+    return userEditUser(userId, userNewEmail, userNewPassword, userPassword).then(response => {
+        if (response.status !== 200) return {error: "Something went wrong while editing"}
         return response.json()
     })
 }

@@ -1,19 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import {Box, TextField, Button} from "@mui/material";
+import {UserEditUserController} from "../../controllers/UserController";
 import '../CSS/Account.style.css';
 
-/*
-export const userGetUser = (userId) => {
-    return fetch(`${baseURL}/${userId}`).then(response => {
-        console.log(response)
-        console.log(response.status)
-        return response.json()
-    })
-}
-*/
+export default function Account() {
+    const [userNewName, setUserNewName] = useState(null)
+    const [userNewEmail, setUserNewEmail] = useState(null)
+    const [userNewPassword, setUserNewpassword] = useState(null)
 
-function Account(){
-    return(
+    const edit = () => {
+        let userId = sessionStorage.getItem("id")
+        UserEditUserController(userId, userNewName, userNewEmail, userNewPassword).then(response => {
+            console.log("Info changed successfully", response)
+        })
+    }
+
+    return (
         <div className="Account-container">
             <Box>
                 <h2>Change your account&apos;s setting</h2>
@@ -24,16 +26,19 @@ function Account(){
                 }}></TextField>
             </Box>
             <Box sx={{width: '80vw', maxWidth: '100%',}} id="EmailBox">
-                <TextField fullWidth id="EmailField" label="NewEmail" type="email"></TextField>
+                <TextField fullWidth id="EmailField" label="NewEmail" type="email" onChange={(event) =>{
+                    setUserNewEmail(event.target.value)
+                }}></TextField>
             </Box>
             <Box sx={{width: '80vw', maxWidth: '100%',}} id="PasswordBox">
-                <TextField fullWidth id="PasswordField" label="NewPassword" type="password"></TextField>
+                <TextField fullWidth id="PasswordField" label="NewPassword" type="password" onChange = {(event) =>{
+                    setUserNewpassword(event.target.value)
+                }}></TextField>
             </Box>
             <Box sx={{width: '80vw', maxWidth: '100%',}} id="titleBox">
-                {/*Functionality onClick={{FunctionUpdate}}*/}
-                <Button type="submit" sx={{color: '#1e1e1e', bgcolor: '#efd6a7', mt: '2vh'}}>Update</Button>
+                <Button type="submit" sx={{color: '#1e1e1e', bgcolor: '#efd6a7', mt: '2vh'}}
+                        onSubmit={edit}>Update</Button>
             </Box>
         </div>
     )
 }
-export default Account;

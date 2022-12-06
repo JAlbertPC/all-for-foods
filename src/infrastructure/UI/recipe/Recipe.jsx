@@ -10,19 +10,23 @@ function Recipe() {
     const [recipe, setRecipe] = useState(null)
     let Author = "PASTITO"
 
-function Recipe({recipe}) {
-    const {RecipeId, Title, Description, Ingredients, Portion, Score} = recipe
-    console.log(recipe)
-    let Author = "Placeholder"
-    return (
+    useEffect(() => {
+        getRecipeByIdController(id).then((recipe) => {
+            console.log(recipe)
+            setRecipe(recipe)
+        })
+    }, [])
+
+    return recipe != null ? (
         <div className="recipe recipe-card">
             <div className="dish-img">
                 <Box sx={{
                     width: '80vw',
                     height: '30vh',
-                }} className="information-recipe-card">Title:  <br/>
-                    Author: {portions}<br/>
-                    <HoverRating /></Box>
+                }} className="information-recipe-card">Title:{recipe.Title}<br/>
+                    Author: {Author}
+                    <HoverRating ratingVal={recipe.Score}/>
+                </Box>
             </div>
             <div className="parts">
                 <div className="left">
@@ -31,7 +35,7 @@ function Recipe({recipe}) {
                         height: '7vh',
                     }}><TextField sx={{borderStyle: 'none'}}
                                   label="Portions"
-                                  defaultValue={portions}
+                                  defaultValue={recipe.Portions}
                                   InputProps={{
                                       readOnly: true,
                                   }}
@@ -39,7 +43,7 @@ function Recipe({recipe}) {
                     <Box label="Ingredients" sx={{backgroundColor: '#9f9f9f'}}>
                         <TextField sx={{borderStyle: 'none'}}
                                    label="Ingredients"
-                                   defaultValue={portions}
+                                   defaultValue={recipe.Portions}
                                    InputProps={{
                                        readOnly: true,
                                    }}
@@ -50,7 +54,7 @@ function Recipe({recipe}) {
                         width: '65vw',
                     }}><TextField sx={{marginLeft: '1vw', borderStyle: 'none'}}
                                   label="Steps" fullWidth="true"
-                                  defaultValue={portions}
+                                  defaultValue={recipe.Steps}
                                   InputProps={{
                                       readOnly: true,
                                   }}

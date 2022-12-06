@@ -18,8 +18,8 @@ function App() {
                     <Route path='/' element={<Navigate to="/Home"/>}/>
                     <Route path='/Home' element={<Home/>}/>
                     <Route path='/Search' element={<Search/>}/>
-                    <Route path='/Account' element={<Account/>}/>
-                    <Route path='/Recipe' element={<Recipe/>}/>
+                    <Route path='/Account/:id' element={<Account/>}/>
+                    <Route path='/Recipe/:id' element={<Recipe />}/>
                     <Route path='/Favorites' element={<Favorites/>}/>
                     <Route path='/RecipeWritings' element={<TextEditor/>}/>
                     {/* <Route path='/Ingredients' element={<Ingredients />}/> */}
