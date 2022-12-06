@@ -7,9 +7,5 @@ export class User {
         this.#userId = userId
         this.#userName = userName
         this.#userEmail = userEmail
-    }    
-    
-    addUser(){
-        this.userId
     }
 } 

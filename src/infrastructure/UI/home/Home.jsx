@@ -12,8 +12,6 @@ function Home() {
 
     const [recipes, setRecipes] = useState(null)
 
-
-
     useEffect(() => {
         getAllRecipesController().then(response => {
             setRecipes(response)
@@ -34,7 +32,7 @@ function Home() {
                     Don&apos;t worry, leave it to us!
                 </Typography>
             </div>
-            <Button  sx={{ bgcolor: '#efd6a7', color:'#5D737E'}} variant="contained" className="small-top-spacing" onClick={() => {recetaRandom(recipes)}}>Show me a random recipe</Button>
+            <Button  sx={{ bgcolor: '#efd6a7', color:'#5D737E' }} variant="contained" className="small-top-spacing" onClick={() => {recetaRandom(recipes)}} className="">Show me a random recipe</Button>
             <RecipeReviewCard recipes={recipes}/>
         </div>
     )

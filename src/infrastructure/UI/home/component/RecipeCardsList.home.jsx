@@ -8,7 +8,7 @@ export default function RecipeReviewCard({recipes}) {
     return recipes != null ? (
         <div className="top-spacing-section botton-spacing-section flex-section">
             <div className="flex-card">
-                {recipes.map(recipeInfo => <RecipeCard recipe={recipeInfo}/>)}
+                {recipes.map((recipeInfo) => <RecipeCard recipe={recipeInfo}/>)}
             </div>
         </div>
     ) : <h1>There was an error recollecting the recipes</h1>;

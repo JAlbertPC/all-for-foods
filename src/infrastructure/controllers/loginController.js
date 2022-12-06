@@ -8,7 +8,5 @@ export const loginUserController = (email, password) => {
 }
 
 export const isLogged = () => {
-    console.log((sessionStorage.getItem("id") || sessionStorage.getItem("username")))
-    return (sessionStorage.getItem("id") || sessionStorage.getItem("username"));
+     return (sessionStorage.getItem("id") != null && sessionStorage.getItem("username") != null);
 }
-

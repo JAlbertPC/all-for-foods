@@ -11,7 +11,7 @@ function Recipe() {
                 <Box sx={{
                     width: '80vw',
                     height: '30vh',
-                }}>By: {portions}</Box>
+                }} className="information-recipe-card">Title:  Author: {portions}</Box>
             </div>
             <div className="parts">
                 <div className="left">

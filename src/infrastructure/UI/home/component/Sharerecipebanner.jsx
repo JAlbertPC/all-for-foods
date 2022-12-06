@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { Container, Box, Button, Typography, TextField } from '@mui/material';
 import Popup from 'reactjs-popup';
 import '../../CSS/Popup.css';
-import {loginUserController} from "../../../controllers/loginController";
+import {isLogged, loginUserController} from "../../../controllers/loginController";
 
 function Sharebanner() {
     const [email, setEmail] = useState(null)
@@ -21,6 +21,7 @@ function Sharebanner() {
             sessionStorage.setItem("id", response.id)
             sessionStorage.setItem("username", response.username)
         })
+
     }
 
     return (

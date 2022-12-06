@@ -16,7 +16,8 @@ import PropTypes from "prop-types";
 export const RecipeCard = ({recipe}) => {
     const {RecipeId, Title, Description, ImageUrl, Score} = recipe
     let Author = "Placeholder"
-    return <Card sx={{maxWidth: 345}}>
+
+    return <Card sx={{maxWidth: 345}} id={RecipeId}>
         <CardHeader
             avatar={
                 <Avatar alt={Author} src="/static/images/avatar/2.jpg"/>

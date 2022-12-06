@@ -11,10 +11,6 @@ export const userRegisterUser = (username, email, password) => {
             "email": email,
             "password": password
         })
-    }).then(response => {
-        console.log(response)
-        console.log(response.status)
-        return response.json()
     })
 }
 
@@ -25,19 +21,11 @@ export const userAddWatchLater = (userId, recipeId) => {
             "userId": userId,
             "recipeId": recipeId
         })
-    }).then(response => {
-        console.log(response)
-        console.log(response.status)
-        return response.json()
     })
 }
 
 export const userGetUser = (userId) => {
-  return fetch(`${baseURL}/${userId}`).then(response => {
-      console.log(response)
-      console.log(response.status)
-      return response.json()
-  })
+  return fetch(`${baseURL}/${userId}`)
 }
 
 export const userEditUser = (userId, userNewEmail, userNewPassword, userPassword) => {
@@ -48,9 +36,5 @@ export const userEditUser = (userId, userNewEmail, userNewPassword, userPassword
           "NewPassword" : userNewPassword,
           "Password" : userPassword
       })
-  }).then(response => {
-      console.log(response)
-      console.log(response.status)
-      return response.json()
   })
 }
