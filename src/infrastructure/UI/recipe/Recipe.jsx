@@ -1,9 +1,14 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {Box, TextField} from "@mui/material";
 import '../CSS/Recipe.style.css';
 import HoverRating from "../globalComponents/RecipeRating";
+import {useParams} from "react-router-dom";
+import {getRecipeByIdController} from "../../controllers/RecipesController";
 
-const portions = 4
+function Recipe() {
+    const {id} = useParams()
+    const [recipe, setRecipe] = useState(null)
+    let Author = "PASTITO"
 
 function Recipe({recipe}) {
     const {RecipeId, Title, Description, Ingredients, Portion, Score} = recipe
@@ -53,7 +58,7 @@ function Recipe({recipe}) {
                 </div>
             </div>
         </div>
-    )
+    ) : <h1>Cargando</h1>
 }
 
 export default Recipe;

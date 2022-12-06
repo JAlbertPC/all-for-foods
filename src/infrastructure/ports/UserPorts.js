@@ -38,3 +38,9 @@ export const userEditUser = (userId, userNewEmail, userNewPassword, userPassword
       })
   })
 }
+
+export const userGetWatchLater = (userId) => {
+    return fetch(`${baseURL}/ListWatchLater/${userId}`, {
+        method: "GET"
+    })
+}

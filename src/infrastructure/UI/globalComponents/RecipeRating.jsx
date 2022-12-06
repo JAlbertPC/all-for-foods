@@ -2,7 +2,6 @@ import React, {useEffect} from 'react';
 import Rating from '@mui/material/Rating';
 import Box from '@mui/material/Box';
 import StarIcon from '@mui/icons-material/Star';
-import {getRecipeByIdController} from "../../controllers/recipesController";
 import PropTypes from "prop-types";
 
 const labels = {
@@ -18,14 +17,7 @@ function getLabelText(value) {
 }
 
 export default function HoverRating({ratingVal}) {
-    const [value, setValue] = React.useState(0);
-    const [hover, setHover] = React.useState(-1);
-
-    useEffect(() => {
-        getRecipeByIdController().then(response => {
-            setValue(response)
-        })
-    }, [value])
+    const [value, setValue] = React.useState(ratingVal);
 
     return (
         <Box
@@ -43,18 +35,11 @@ export default function HoverRating({ratingVal}) {
                 onChange={(event, newValue) => {
                     setValue(newValue);
                 }}
-                onChangeActive={(event, newHover) => {
-                    setHover(newHover);
-                }}
-                emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
             />
-            {value !== null && (
-                <Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
-            )}
         </Box>
     );
 }
 
 HoverRating.prototype = {
-    ratingValue : PropTypes.number
+    ratingValue: PropTypes.number
 }

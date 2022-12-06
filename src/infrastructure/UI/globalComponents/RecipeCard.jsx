@@ -16,7 +16,7 @@ import HoverRating from "./RecipeRating";
 
 export const RecipeCard = ({recipe}) => {
     const {RecipeId, Title, Description, ImageUrl, Score} = recipe
-    console.log(recipe)
+    //console.log(recipe)
     let Author = "Placeholder"
 
     return <Card sx={{maxWidth: 345, width:'18vw'}}  id={RecipeId}>
@@ -38,13 +38,13 @@ export const RecipeCard = ({recipe}) => {
             </Typography>
         </CardContent>
         <CardContent>
-            {/*<HoverRating ratingVal={Score}/>*/}
+            <HoverRating ratingVal={Score}/>
         </CardContent>
         <CardActions disableSpacing>
             <IconButton aria-label="add to favorites">
                 <FavoriteIcon/>
             </IconButton>
-            <Button size="small" href="/Recipe">Learn More</Button>
+            <Button size="small" href={`/Recipe/${RecipeId}`}>Learn More</Button>
         </CardActions>
     </Card>
 }

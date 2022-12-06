@@ -1,8 +1,7 @@
-import React, {useState} from 'react';
-import { Container, Box, Button, Typography, TextField } from '@mui/material';
-import Popup from 'reactjs-popup';
-import '../../CSS/Popup.css';
-import {isLogged, loginUserController} from "../../../controllers/loginController";
+import React from 'react';
+import { Container, Box, Typography } from '@mui/material';
+import Login from "../../globalComponents/Loggin";
+import SigninPopUp from "../component/SigninPopUp";
 
 function Sharebanner() {
     const [email, setEmail] = useState(null)

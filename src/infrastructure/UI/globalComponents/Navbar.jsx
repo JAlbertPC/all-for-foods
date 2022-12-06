@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { AppBar, Container, Toolbar, Typography, Box, IconButton, Menu, MenuItem, Tooltip, Avatar, Button } from '@mui/material';
-import {isLogged} from "../../controllers/loginController";
+import LoggedUserMenu from "./LoggedUserMenu.navBar";
+import {isLogged} from "../../controllers/LoginController";
 import '../CSS/Navbar.css';
 
 const pages = ['Home', 'Search'];

@@ -1,4 +1,4 @@
-import {getAllRecipesPort, getRecipeByIdPort} from "../ports/recipesPort"
+import {getAllRecipesPort, getRecipeByIdPort} from "../ports/RecipesPort"
 
 export const getAllRecipesController = () => {
     return getAllRecipesPort().then(response => {
@@ -9,6 +9,7 @@ export const getAllRecipesController = () => {
 
 export const getRecipeByIdController = (recipeId) => {
     return getRecipeByIdPort(recipeId).then(recipes => {
-        console.log(recipes)
+        if (recipes.status !== 200) return {error: "Algo salio mal"}
+        return recipes.json()
     })
 }

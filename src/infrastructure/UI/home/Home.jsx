@@ -4,9 +4,9 @@ import Welcomebanner from "./component/Welcomebanner";
 import Sharebanner from "./component/Sharerecipebanner";
 import '../CSS/Home.style.css';
 import {Button, Typography} from "@mui/material";
-import {getAllRecipesController} from "../../controllers/recipesController";
-import {loginUserController} from "../../controllers/loginController";
-import {recetaRandom} from "../../../domain/useCases/randomRecipe";
+import {getAllRecipesController} from "../../controllers/RecipesController";
+import {loginUserController} from "../../controllers/LoginController";
+import {recetaRandom} from "../../../domain/useCases/RandomRecipe";
 
 function Home() {
 
