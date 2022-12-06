@@ -1,13 +1,14 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import { AppBar, Container, Toolbar, Typography, Box, IconButton, Menu, MenuItem, Tooltip, Avatar, Button } from '@mui/material';
 import LoggedUserMenu from "./LoggedUserMenu.navBar";
-import {isLogged} from "../../controllers/LoginController";
+import {IsLogged} from "../../controllers/LoginController";
 import '../CSS/Navbar.css';
 
 const pages = ['Home', 'Search'];
 
 function Navbar() {
     const [anchorElNav, setAnchorElNav] = useState(null);
+    const a = (IsLogged() ? <LoggedUserMenu />: "");
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -15,8 +16,6 @@ function Navbar() {
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
     };
-    console.log(isLogged())
-
     return (
         <AppBar position="fixed" >
             <Container maxWidth="xl">
@@ -49,7 +48,7 @@ function Navbar() {
                             color="inherit"
                         >
                         </IconButton>
-                        <Menu
+                        <Menu className="icon-menu"
                             id="menu-appbar"
                             anchorEl={anchorElNav}
                             anchorOrigin={{
@@ -86,7 +85,7 @@ function Navbar() {
                           </Button>
                         ))}
                     </Box>
-                    {isLogged() ? <LoggedUserMenu />: ""}
+                    {a}
                 </Toolbar>
             </Container>
         </AppBar>

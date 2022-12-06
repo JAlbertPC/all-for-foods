@@ -11,7 +11,7 @@ export default function RecipeReviewCard({recipes}) {
                 {recipes.map(recipeInfo => <RecipeCard recipe={recipeInfo}/>)}
             </div>
         </div>
-    ) : <h1>There was an error recollecting the recipes</h1>;
+    ) : <h1>Loading...</h1>;
 }
 
 RecipeReviewCard.propTypes = {

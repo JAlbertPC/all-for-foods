@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Avatar, Box, IconButton, Menu, MenuItem, Tooltip, Typography} from "@mui/material";
 
-const settings = ['Account', 'Favorites', 'Logout'];
+const settings = ['Account', 'Favorites', 'Logout', 'Write a Recipe'];
 
 export default function LoggedUserMenu() {
     const [anchorElUser, setAnchorElUser] = useState(null);
@@ -13,6 +13,7 @@ export default function LoggedUserMenu() {
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
     };
+
     return (
         <Box sx={{flexGrow: 0}}>
             <Tooltip title="Open settings">

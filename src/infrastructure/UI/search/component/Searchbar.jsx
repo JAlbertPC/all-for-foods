@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { TextField, Autocomplete, InputAdornment } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 //TODO: hacer que pueda distinguir entre busqueda de ingrediente y de titulo de receta
@@ -7,6 +7,10 @@ import { Ingredients } from '../../../../testing/data/Ingredients';
 import '../../CSS/Searchbar.style.css';
 
 export default function Searchbar() {
+    const [recipe, setRecipe] = useState("");
+
+    
+
     return (
         <Autocomplete
             freeSolo

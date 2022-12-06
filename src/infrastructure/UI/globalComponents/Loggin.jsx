@@ -1,8 +1,8 @@
 import Popup from "reactjs-popup";
 import {Box, Button, TextField} from "@mui/material";
+import {LoginUserController} from "../../controllers/LoginController";
 import React, {useState} from "react";
 import '../CSS/Popup.css';
-import {loginUserController} from "../../controllers/LoginController";
 
 export default function Login() {
     const [email, setEmail] = useState(null)
@@ -17,10 +17,11 @@ export default function Login() {
     }
 
     const login = () => {
-        loginUserController(email, password).then(response => {
+        LoginUserController(email, password).then(response => {
             sessionStorage.setItem("id", response.id)
             sessionStorage.setItem("username", response.username)
-            console.log("bruh")
+
+            location.reload();
         })
     }
     return (

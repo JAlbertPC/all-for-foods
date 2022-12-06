@@ -6,7 +6,7 @@ import '../CSS/Home.style.css';
 import {Button, Typography} from "@mui/material";
 import {getAllRecipesController} from "../../controllers/RecipesController";
 import {loginUserController} from "../../controllers/LoginController";
-import {recetaRandom} from "../../../domain/useCases/RandomRecipe";
+import {recetaRandom} from "../../controllers/RecipesController";
 
 function Home() {
 
