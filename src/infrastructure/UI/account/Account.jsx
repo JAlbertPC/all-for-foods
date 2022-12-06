@@ -25,6 +25,7 @@ function Account({}){
             <Box sx={{width: '80vw', maxWidth: '100%',}} id="PasswordBox">
                 <TextField fullWidth id="PasswordField" label="NewPassword" type="password"></TextField>
             </Box>
+
         </div>
     )
 }
