@@ -10,6 +10,13 @@
 .parts{
     align-self: baseline;
     display: flex !important;
+    border-style: none !important;
+}
+
+.dish-img{
+    display: flex;
+    align-content: end;
+
 }
 
 .left{
@@ -23,6 +30,9 @@
 .css-1rcma2b {
     border-radius: 0 0 25px 25px;
     background-color: #EFD6A7 !important;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 .css-1sp6rtk {
@@ -45,10 +55,6 @@
     border-radius: 25px;
     height: 62vh;
     background-color: #EFD6A7 !important;
-}
-
-.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
-    border-style: none !important;
 }
 
 .css-1sumxir-MuiFormLabel-root-MuiInputLabel-root{

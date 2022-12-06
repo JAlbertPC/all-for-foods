@@ -30,7 +30,7 @@ function Welcomebanner() {
                 <Typography sx={{ lineHeight: 3 ,color: '#FFFFFF'}}>
                     Find recipies without worrying about the ingredients you&apos;re missing!
                 </Typography>
-                <Button variant="outlined" sx={{
+                <Button variant="outlined" href="/Search" sx={{
                     borderColor: '#CCE7CD45',
                     bgcolor: '#261D1DBF',
                     color: '#FFFFFF',

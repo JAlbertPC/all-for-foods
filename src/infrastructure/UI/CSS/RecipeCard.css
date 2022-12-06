@@ -1,21 +1,39 @@
-.div-banner{
+.div-banner {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.button-show-me{
+.button-show-me {
     background-color: #efd6a7;
 }
 
-.top-spacing-section{
+.top-spacing-section {
     margin-top: 10vh;
 }
 
-.botton-spacing-section{
+.botton-spacing-section {
     margin-bottom: 10vh;
 }
 
-.small-top-spacing{
+.small-top-spacing {
     margin-top: 5vh;
+}
+
+.css-1ri6ub7-MuiPaper-root-MuiCard-root {
+    margin-bottom: 2vh;
+}
+
+.flex-section{
+    display: flex;
+    justify-content: center;
+}
+
+.flex-card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    column-gap: 2vw;
 }

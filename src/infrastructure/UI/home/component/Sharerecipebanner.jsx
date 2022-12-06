@@ -1,9 +1,29 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Container, Box, Button, Typography, TextField } from '@mui/material';
 import Popup from 'reactjs-popup';
 import '../../CSS/Popup.css';
+import {loginUserController} from "../../../controllers/loginController";
 
 function Sharebanner() {
+    const [email, setEmail] = useState(null)
+    const [password, setPassword] = useState(null)
+
+    const handleEmailTextField = (event) => {
+        setEmail(event.target.value)
+    }
+
+    const handlePasswordTextField = (event) => {
+        setPassword(event.target.value)
+    }
+
+    const login = () => {
+        console.log(email + " " + password)
+        loginUserController(email, password).then(response => {
+            localStorage.setItem("id", response.id)
+            localStorage.setItem("username", response.username)
+        })
+    }
+
     return (
         <Container maxWidth="xl" >
             <Box sx={{
@@ -46,7 +66,7 @@ function Sharebanner() {
                             <button className="close" onClick={close}>
                                 &times;
                             </button>
-                            <div className="header"> Login </div>
+                            <div className="header"> Log in </div>
                             <div className="content">
                                 {' '}
                                 <Box component="form"
@@ -56,7 +76,7 @@ function Sharebanner() {
                                     noValidate
                                     autoComplete="off"
                                 >
-                                    <TextField label="email" type="email" color="secondary" focused />
+                                    <TextField label="email" type="email" color="secondary" focused  onChange={handleEmailTextField}/>
                                 </Box>
                                 <Box component="form"
                                     sx={{
@@ -65,12 +85,12 @@ function Sharebanner() {
                                     noValidate
                                     autoComplete="off"
                                 >
-                                    <TextField label="Password" autocomplete="off" type="password" color="secondary" focused />
+                                    <TextField label="Password" autocomplete="off" type="password" color="secondary" focused onChange={handlePasswordTextField}/>
                                 </Box>
                             </div>
                             <div className="actions">
                                 <Popup
-                                    trigger={<button type="submit" className="button"> Login </button>}
+                                    trigger={<Button type="submit" className="button login-button" onClick={login}> Login </Button>}
                                     position="top center"
                                     nested
                                 >
@@ -126,7 +146,7 @@ function Sharebanner() {
                             </div>
                             <div className="actions">
                                 <Popup
-                                    trigger={<button type="submit" className="button"> Sign in </button>}
+                                    trigger={<Button type="submit" className="button login-button"> Sign in </Button>}
                                     position="top center"
                                     nested
                                 >

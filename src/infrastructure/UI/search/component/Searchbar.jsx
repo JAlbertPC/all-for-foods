@@ -16,12 +16,7 @@ export default function Searchbar() {
             options={Ingredients}
             getOptionLabel={(option) => option.Name}
             renderInput={(params) => (
-                <TextField {...params} label="Search" placeholder="Search"
-                    InputProps={{
-                        ...params.InputProps,
-                        startAdornment: (<InputAdornment position="start"> <SearchIcon />
-                        </InputAdornment>)
-                    }} />
+                <TextField {...params} label="Search" placeholder="Search"/>
             )}
             sx={{ width: '25vw' }}
         >

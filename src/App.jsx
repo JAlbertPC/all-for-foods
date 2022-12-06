@@ -4,6 +4,8 @@ import Home from './infrastructure/UI/home/Home';
 import Search from "./infrastructure/UI/search/Search";
 import Recipe from './infrastructure/UI/recipe/Recipe';
 import { BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
+import RichtextEditor from "./infrastructure/UI/recipe/RecipeWriting";
+import TextEditor from "./infrastructure/UI/recipe/RecipeWriting";
 
 
 
@@ -17,6 +19,7 @@ function App() {
           <Route path='/Home' element={<Home />} />
           <Route path='/Search' element={<Search />} />
           <Route path='/Recipe' element={<Recipe />} />
+            <Route path='/RecipeWritings' element={<TextEditor />} />
           {/* <Route path='/Ingredients' element={<Ingredients />}/> */}
         </Routes>
       </BrowserRouter>

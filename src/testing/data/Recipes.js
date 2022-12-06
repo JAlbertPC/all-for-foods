@@ -20,26 +20,26 @@ export const Recipes = [{
     "Score": 0.0,
     "Author": "PastitoMojado"
 },
-{
-    "RecipeId": 2,
-    "Title": "Prueba2",
-    "Description": "Prueba de nuevo x2",
-    "ImageUrl": "https://www.paulinacocina.net/wp-content/uploads/2020/08/tacos-meat-food-mexican-lunch-dinner-640x480.jpg",
-    "Ingredients": [
-        {
-            "IngredientIdId": 1,
-            "Name": "Ajo",
-            "Amount": 2
-        },
-        {
-            "IngredientIdId": 2,
-            "Name": "Cebolla",
-            "Amount": 2
-        }
-    ],
-    "Portions": 1,
-    "Steps": "Prueba",
-    "Score": 0.0,
-    "Author": "MojadoPastito"
-}
+    {
+        "RecipeId": 2,
+        "Title": "Prueba2",
+        "Description": "Prueba de nuevo x2",
+        "ImageUrl": "https://www.paulinacocina.net/wp-content/uploads/2020/08/tacos-meat-food-mexican-lunch-dinner-640x480.jpg",
+        "Ingredients": [
+            {
+                "IngredientIdId": 1,
+                "Name": "Ajo",
+                "Amount": 2
+            },
+            {
+                "IngredientIdId": 2,
+                "Name": "Cebolla",
+                "Amount": 2
+            }
+        ],
+        "Portions": 1,
+        "Steps": "Prueba",
+        "Score": 0.0,
+        "Author": "MojadoPastito"
+    }
 ]

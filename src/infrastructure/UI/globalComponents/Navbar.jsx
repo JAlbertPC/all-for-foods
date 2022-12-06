@@ -3,8 +3,8 @@ import { AppBar, Container, Toolbar, Typography, Box, IconButton, Menu, MenuItem
 import '../CSS/Navbar.css';
 
 
-const pages = ['Home', 'Search', 'Ingredients'];
-const settings = ['Profile', 'Account', 'Favorites', 'Logout'];
+const pages = ['Home', 'Search'];
+const settings = ['Account', 'Favorites', 'Logout'];
 
 function Navbar() {
     const [anchorElNav, setAnchorElNav] = useState(null);

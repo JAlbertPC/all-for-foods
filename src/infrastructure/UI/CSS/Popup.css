@@ -66,3 +66,13 @@
 .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
   color: rgb(224, 218, 161) !important;
 }
+
+.login-button .css-1e6y48t-MuiButtonBase-root-MuiButton-root{
+  background-color: #2a1c19!important;
+  color: white;
+}
+
+.login-button{
+  background-color: #261D1DBF!important;
+  color:white!important;
+}

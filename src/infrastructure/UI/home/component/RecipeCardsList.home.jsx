@@ -1,23 +1,33 @@
-import React from 'react';
-import { Card, CardHeader, CardMedia, CardContent, CardActions, Typography } from '@mui/material';
-import { Button, IconButton, Avatar, Grid } from '@mui/material';
+import React, {useEffect, useState} from 'react';
+import {Card, CardHeader, CardMedia, CardContent, CardActions, Typography} from '@mui/material';
+import {Button, IconButton, Avatar} from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-//cambiar el test
-import { Recipes } from '../../../../testing/data/Recipes';
 import '../../CSS/RecipeCard.css';
+import { PropTypes } from "prop-types";
+
+import {getAllRecipesController} from "../../../controllers/recipesController";
 
 
-export default function RecipeReviewCard() {
-    return (
-        <div className="top-spacing-section" >
+export default function RecipeReviewCard({recipes}) {
 
-            <Grid sx={{ justifyContent: 'space-around'}} container className="top-spacing-section botton-spacing-section">
-                {Recipes.map(recipeInfo => {
+    /*const [recipes, setRecipes] = useState(null)
+
+    useEffect(() => {
+        getAllRecipesController().then(response => {
+            console.log(response)
+            setRecipes(response)
+        })
+    }, [])*/
+
+    return recipes != null ? (
+        <div className="top-spacing-section botton-spacing-section flex-section">
+            <div className="flex-card">
+                {recipes.map(recipeInfo => {
                     return <>
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{maxWidth: 345}}>
                             <CardHeader
                                 avatar={
-                                    <Avatar alt={recipeInfo.Author} src="/static/images/avatar/2.jpg" />
+                                    <Avatar alt={recipeInfo.Author} src="/static/images/avatar/2.jpg"/>
                                 }
                                 title={recipeInfo.Title}
                             />
@@ -34,14 +44,18 @@ export default function RecipeReviewCard() {
                             </CardContent>
                             <CardActions disableSpacing>
                                 <IconButton aria-label="add to favorites">
-                                    <FavoriteIcon />
+                                    <FavoriteIcon/>
                                 </IconButton>
                                 <Button size="small" href="/Recipe">Learn More</Button>
                             </CardActions>
                         </Card>
                     </>
                 })}
-            </Grid>
+            </div>
         </div>
-    );
+    ) : <h1>There was an error recollecting the recipes</h1>;
+}
+
+RecipeReviewCard.propTypes = {
+    recipes : PropTypes.array
 }
