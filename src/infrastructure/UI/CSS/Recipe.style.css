@@ -1,0 +1,57 @@
+.recipe {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+}
+
+.parts{
+    align-self: baseline;
+    display: flex !important;
+}
+
+.left{
+    margin: 4vh 5vw;
+}
+
+.right{
+    margin: 4vh 5vw 0 0;;
+}
+
+.css-1rcma2b {
+    border-radius: 0 0 25px 25px;
+    background-color: #EFD6A7 !important;
+}
+
+.css-1sp6rtk {
+    align-self: baseline;
+    border-radius: 25px;
+    background-color: #EFD6A7 !important;
+}
+
+.css-mntqo9 {
+    align-self: baseline;
+    margin: 4vh 0 0 0;
+    width: 20vw;
+    height: 50vh;
+    border-radius: 25px;
+    background-color: #EFD6A7 !important;
+}
+
+.css-adsvjz{
+    align-self: baseline;
+    border-radius: 25px;
+    height: 62vh;
+    background-color: #EFD6A7 !important;
+}
+
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+    border-style: none !important;
+}
+
+.css-1sumxir-MuiFormLabel-root-MuiInputLabel-root{
+    color: #383333 !important;
+    left: auto !important;
+}

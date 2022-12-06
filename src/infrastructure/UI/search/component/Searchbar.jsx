@@ -16,15 +16,15 @@ export default function Searchbar() {
             options={Ingredients}
             getOptionLabel={(option) => option.Name}
             renderInput={(params) => (
-                    <TextField {...params} label="Search" placeholder="Search" 
-                        InputProps={{
+                <TextField {...params} label="Search" placeholder="Search"
+                    InputProps={{
                         ...params.InputProps,
                         startAdornment: (<InputAdornment position="start"> <SearchIcon />
-                        </InputAdornment>)}} />
+                        </InputAdornment>)
+                    }} />
             )}
             sx={{ width: '25vw' }}
         >
-            <SearchIcon />
         </Autocomplete>
 
 

@@ -1,3 +1,6 @@
+html{
+    background-color: #F3FFF1;
+}
 .banners{
     display: flex;
     height: 75vh;
@@ -7,6 +10,10 @@
 }
 
 .bottom-section-spacing{
-    margin-top: 10vh;
+    margin-top: 5vh;
 
+}
+
+.css-ub5cbl-MuiButtonBase-root-MuiButton-root{
+    color: #362e2e;
 }

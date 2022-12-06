@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { AppBar, Container, Toolbar, Typography, Box, IconButton, Menu, MenuItem, Tooltip, Avatar, Button } from '@mui/material';
-import '../CSS/RecipeCard.css';
+import '../CSS/Navbar.css';
 
 
 const pages = ['Home', 'Search', 'Ingredients'];
