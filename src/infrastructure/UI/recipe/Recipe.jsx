@@ -1,17 +1,23 @@
 import React from "react";
 import {Box, TextField} from "@mui/material";
 import '../CSS/Recipe.style.css';
+import HoverRating from "../globalComponents/RecipeRating";
 
 const portions = 4
 
-function Recipe() {
+function Recipe({recipe}) {
+    const {RecipeId, Title, Description, Ingredients, Portion, Score} = recipe
+    console.log(recipe)
+    let Author = "Placeholder"
     return (
         <div className="recipe recipe-card">
             <div className="dish-img">
                 <Box sx={{
                     width: '80vw',
                     height: '30vh',
-                }} className="information-recipe-card">Title:  Author: {portions}</Box>
+                }} className="information-recipe-card">Title:  <br/>
+                    Author: {portions}<br/>
+                    <HoverRating /></Box>
             </div>
             <div className="parts">
                 <div className="left">

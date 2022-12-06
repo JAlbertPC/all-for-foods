@@ -12,12 +12,14 @@ import {
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import React from "react";
 import PropTypes from "prop-types";
+import HoverRating from "./RecipeRating";
 
 export const RecipeCard = ({recipe}) => {
     const {RecipeId, Title, Description, ImageUrl, Score} = recipe
+    console.log(recipe)
     let Author = "Placeholder"
 
-    return <Card sx={{maxWidth: 345}} id={RecipeId}>
+    return <Card sx={{maxWidth: 345, width:'18vw'}}  id={RecipeId}>
         <CardHeader
             avatar={
                 <Avatar alt={Author} src="/static/images/avatar/2.jpg"/>
@@ -34,6 +36,9 @@ export const RecipeCard = ({recipe}) => {
             <Typography variant="body2" color="text.secondary">
                 {Description}
             </Typography>
+        </CardContent>
+        <CardContent>
+            {/*<HoverRating ratingVal={Score}/>*/}
         </CardContent>
         <CardActions disableSpacing>
             <IconButton aria-label="add to favorites">

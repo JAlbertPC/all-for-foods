@@ -16,7 +16,7 @@ function Home() {
         getAllRecipesController().then(response => {
             setRecipes(response)
         })
-    }, [recipes])
+    }, [])
 
     return (
         <div>

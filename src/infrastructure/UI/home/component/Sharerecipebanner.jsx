@@ -105,7 +105,7 @@ function Sharebanner() {
                 </Popup>
                 {/* Sign in popup */}
                 <Popup
-                    trigger={<Button>¿No tienes cuenta? Regístrate</Button>}
+                    trigger={<Button>Do not have an account? sign in</Button>}
                     modal
                     nested
                 >
