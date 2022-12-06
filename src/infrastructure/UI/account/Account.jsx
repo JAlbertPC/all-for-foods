@@ -12,10 +12,12 @@ export const userGetUser = (userId) => {
 }
 */
 
-function Account({}){
+function Account(){
     return(
         <div className="Account-container">
-            <TextField variant="h2">Change your account&apos;s setting</TextField>
+            <Box>
+                <h2 >Change your account&apos;s setting</h2>
+            </Box>
             <Box sx={{width: '80vw', maxWidth: '100%',}} id="NameBox">
                 <TextField fullWidth id="NameField" label="NewName" type="text"></TextField>
             </Box>
@@ -25,7 +27,10 @@ function Account({}){
             <Box sx={{width: '80vw', maxWidth: '100%',}} id="PasswordBox">
                 <TextField fullWidth id="PasswordField" label="NewPassword" type="password"></TextField>
             </Box>
-
+            <Box sx={{width: '80vw', maxWidth: '100%',}} id="titleBox">
+                {/*Functionality onClick={{FunctionUpdate}}*/}
+                <Button type="submit" sx={{color: '#1e1e1e', bgcolor: '#efd6a7', mt: '2vh'}}>Update</Button>
+            </Box>
         </div>
     )
 }

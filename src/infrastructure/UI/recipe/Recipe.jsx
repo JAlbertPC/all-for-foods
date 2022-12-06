@@ -6,7 +6,7 @@ const portions = 4
 
 function Recipe() {
     return (
-        <div className="recipe">
+        <div className="recipe recipe-card">
             <div className="dish-img">
                 <Box sx={{
                     width: '80vw',

@@ -61,3 +61,7 @@
     color: #383333 !important;
     left: auto !important;
 }
+
+.recipe-card .css-1d3z3hw-MuiOutlinedInput-notchedOutline{
+    border-color: transparent!important;
+}

@@ -84,7 +84,7 @@ function Sharebanner() {
                                     noValidate
                                     autoComplete="off"
                                 >
-                                    <TextField label="Password" autocomplete="off" type="password" color="secondary" focused onChange={handlePasswordTextField}/>
+                                    <TextField label="Password" autoComplete="off" type="password" color="secondary" focused onChange={handlePasswordTextField}/>
                                 </Box>
                             </div>
                             <div className="actions">
@@ -141,7 +141,7 @@ function Sharebanner() {
                                     noValidate
                                     autoComplete="off"
                                 >
-                                    <TextField label="Password" autocomplete="off" type="password" color="secondary" focused />
+                                    <TextField label="Password" autoComplete="off" type="password" color="secondary" focused />
                                 </Box>
                             </div>
                             <div className="actions">

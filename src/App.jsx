@@ -6,6 +6,7 @@ import Recipe from './infrastructure/UI/recipe/Recipe';
 import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 import TextEditor from "./infrastructure/UI/recipe/RecipeWriting";
 import Account from "./infrastructure/UI/account/Account";
+import Favorites from "./infrastructure/UI/account/Favorites";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
                     <Route path='/Search' element={<Search/>}/>
                     <Route path='/Account' element={<Account/>}/>
                     <Route path='/Recipe' element={<Recipe/>}/>
+                    <Route path='/Favorites' element={<Favorites/>}/>
                     <Route path='/RecipeWritings' element={<TextEditor/>}/>
                     {/* <Route path='/Ingredients' element={<Ingredients />}/> */}
                 </Routes>
